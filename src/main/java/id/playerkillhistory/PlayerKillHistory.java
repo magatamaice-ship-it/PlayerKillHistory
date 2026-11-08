@@ -29,12 +29,20 @@ public class PlayerKillHistory extends JavaPlugin {
                 this
         );
 
+        if (getCommand("riwayat") != null) {
+            getCommand("riwayat").setExecutor(
+                    new HistoryCommand(this)
+            );
+        } else {
+            getLogger().severe("Command riwayat tidak ditemukan di plugin.yml!");
+        }
+
         getLogger().info("================================");
         getLogger().info("PlayerKillHistory berhasil aktif!");
         getLogger().info("Database SQLite: Aktif");
         getLogger().info("Player Kill Detector: Aktif");
         getLogger().info("Player Head Drop: Aktif");
-        getLogger().info("Kill History: Dalam pengembangan");
+        getLogger().info("Kill History: Aktif");
         getLogger().info("================================");
     }
 
