@@ -1,0 +1,20 @@
+
+name: PlayerKillHistory
+version: 1.0.0
+main: id.playerkillhistory.PlayerKillHistory
+api-version: '1.21'
+author: PlayerKillHistory
+description: Player head drops and kill history system.
+
+commands:
+  riwayat:
+    description: Melihat riwayat kill dan kematian.
+    usage: /riwayat
+    aliases:
+      - killhistory
+
+permissions:
+  playerkillhistory.riwayat:
+    description: Mengakses riwayat kill.
+    default: true
+    
