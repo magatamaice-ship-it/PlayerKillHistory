@@ -24,10 +24,16 @@ public class PlayerKillHistory extends JavaPlugin {
             return;
         }
 
+        getServer().getPluginManager().registerEvents(
+                new PlayerKillListener(this),
+                this
+        );
+
         getLogger().info("================================");
         getLogger().info("PlayerKillHistory berhasil aktif!");
         getLogger().info("Database SQLite: Aktif");
-        getLogger().info("Player Head Drop: Dalam pengembangan");
+        getLogger().info("Player Kill Detector: Aktif");
+        getLogger().info("Player Head Drop: Aktif");
         getLogger().info("Kill History: Dalam pengembangan");
         getLogger().info("================================");
     }
